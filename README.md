@@ -18,9 +18,11 @@ Below are some wireframe mock ups of the sites UX:
 
 ![A wireframe image of the site's services page, across three devices](static/images/wireframes/services.png)
 
-![A wireframe image of the site's standard jobs order page, across three devices](static/images/wireframes/standard-jobs-order-form.png)
+![A wireframe image of the site's products page, across three devices](static/images/wireframes/products.png)
 
-![A wireframe image of the site's custom jobs equiry page, across three devices](static/images/wireframes/custom-jobs-enquiry-form.png)
+![A wireframe image of the site's product page, across three devices](static/images/wireframes/product-page.png)
+
+![A wireframe image of the site's custom jobs equiry page, across three devices](static/images/wireframes/custom-order-form.png)
 
 ![A wireframe image of the site's custom jobs payment page, across three devices](static/images/wireframes/custom-job-payment-page.png)
 
@@ -29,5 +31,7 @@ Below are some wireframe mock ups of the sites UX:
 ![A wireframe image of the site's login page, across three devices](static/images/wireframes/login.png)
 
 ![A wireframe image of the site's sign up page, across three devices](static/images/wireframes/sign-up.png)
+
+![A wireframe image of the site's profile page, across three devices](static/images/wireframes/profile-page.png)
 
 ![A wireframe image of the site's blog page, across three devices](static/images/wireframes/blog.png)
