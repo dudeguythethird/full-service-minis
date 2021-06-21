@@ -75,16 +75,17 @@
                             <a class="nav-link" href="#">My Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Logout</a>
+                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                         </li>
                     {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sign-up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_signup' %}">Sign-up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        </li>
                     {% endif %}
+                    <!-- So far, I have not included a shopping bag link. My original plan was not to use a shopping bag but I think I may have to reconsider. When that happens, the code should go here.-->
                 </ul>
             </div>
         </div>
