@@ -9,6 +9,14 @@ body {
     font-family: sans-serif;
 }
 
+.logo-font {
+    font-family: 'Mate SC', serif !important;
+    color: black !important;
+    font-size: larger;
+}
+
+/* Next two classes come from here (with some customisation) https://stackoverflow.com/questions/1891857/how-do-you-stretch-an-image-to-fill-a-div-while-keeping-the-images-aspect-rat */
+
 .img-container {
     height: 400px;
     width: 33.3333%;
