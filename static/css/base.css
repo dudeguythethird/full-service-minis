@@ -40,3 +40,37 @@ body {
 .text-black {
     color: #000 !important;
 }
+
+.nav-item a {
+    color: #000;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: white;
+    background-color: darkred;
+}
+
+.btn-danger {
+    background-color: darkred;
+    border-color: darkred;
+}
+
+/*------------------------------------------------------Media Queries*/
+
+@media (max-width: 576px) {
+    .img-container {
+        height: 400px;
+        width: 100%;
+}}
+
+@media (min-width: 768px) {
+    .img-container {
+        height: 400px;
+        width: 50%;
+}}
+
+@media (min-width: 992px) {
+    .img-container {
+        height: 400px;
+        width: 33.33333%;
+}}
