@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
 <!-- Check if the container class ends up actually doing anything at end of project.-->
     <div class="container">
@@ -23,7 +31,7 @@
             <div class="col-lg-2 col-md-1 d-none d-md-block"></div>
             <div class="col-12 col-md-10 col-lg-8">
                 <p class="my-2 p-3 rounded disclaimer">(Please note: this website is for a fictional miniature painting company. The website is only meant to be a demonstration of a full stack Django app. If you are looking for professional, fully painted miniatures, please check out <a href="https://ravensnestpainting.com/" target="_blank">Ravens Nest Painting</a>, who have kindly let me use their images for this student project.)</p>
-                <p class="my-4">Welcome to Full Service Minis! We offer fully painted Warhammer for your gaming needs. We stock a selection of <a>popular kits</a> that you can get painted to a variety of quality grades. We also offer <a>custom paint jobs</a>. These can be for any miniatures you desire and can also be as detailed as you see fit!</p>
+                <p class="my-4">Welcome to Full Service Minis! We offer fully painted Warhammer for your gaming needs. We stock a selection of <a href="#">popular kits</a> that you can get painted to a variety of quality grades. We also offer <a href="#">custom paint jobs</a>. These can be for any miniatures you desire and can also be as detailed as you see fit!</p>
             </div>
             <div class="col-lg-2 col-md-1 d-none d-md-block"></div>
         </div>

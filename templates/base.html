@@ -45,13 +45,13 @@
     <title>Full Service Minis {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
-    <header class="container-fluid header">
+<body onresize="headerHeight()">
+    <header class="container-fluid fixed-top header">
         <div class="container">
-            <div class="row">
+            <div class="row mobile-header">
                 <div class="col-10 col-md-12 text-center">
                     <h1>
-                        <a href="{% url 'home' %}" class="nav-link logo-font my-2">Full Service Minis</a>
+                        <a href="{% url 'home' %}" class="nav-link logo-font mb-1">Full Service Minis</a>
                     </h1>
                 </div>
                 <div class="col-2 d-md-none d-flex align-items-center"><a class="text-black" data-bs-toggle="collapse"
@@ -114,6 +114,22 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <!-- The following script sets the height of the spacer div found on the site's individual pages to the actual height of the header. This is so each page's content is shown underneath the header on first load. -->
+    <script>
+        function headerHeight(){
+            let screenWidth = screen.width;
+            if (screenWidth > 576) {
+                // This part of the function comes from: https://stackoverflow.com/questions/10458465/how-to-set-height-of-element-to-match-height-of-another-element.
+                $(".header-container").css("height", $(".header").height());
+            }
+            else {
+                $(".header-container").css("height", $(".mobile-header").height());
+            }
+        }
+        $(document).ready(function() {
+            headerHeight()
+        });
+    </script>
     {% endblock %}
 </body>
 
