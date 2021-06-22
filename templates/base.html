@@ -45,9 +45,9 @@
     <title>Full Service Minis {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
+<body onresize="headerHeight()">
     <header class="container fixed-top header">
-        <div class="row">
+        <div class="row mobile-header">
             <div class="col-10 col-md-12 text-center">
                 <h1>
                     <a href="{% url 'home' %}" class="nav-link logo-font my-2">Full Service Minis</a>
@@ -108,11 +108,20 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <!-- The following script comes from https://stackoverflow.com/questions/10458465/how-to-set-height-of-element-to-match-height-of-another-element.
-    It sets the height of .header to container to the height of the header, whatever that may be.-->
+    <!-- The following script was inspired by: https://stackoverflow.com/questions/10458465/how-to-set-height-of-element-to-match-height-of-another-element.
+    It sets the height of .header container to the height of the header, pushing the page content to below the header. I have customised it to work with my mobile layout-->
     <script>
+        function headerHeight(){
+            let screenWidth = screen.width;
+            if (screenWidth > 576) {
+                $(".header-container").css("height", $(".header").height());
+            }
+            else {
+                $(".header-container").css("height", $(".mobile-header").height());
+            }
+        }
         $(document).ready(function() {
-            $(".header-container").css("height", $(".header").height());
+            headerHeight()
         });
     </script>
     {% endblock %}
