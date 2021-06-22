@@ -45,15 +45,19 @@
     <title>Full Service Minis {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body onresize="headerHeight()">
-    <header class="container fixed-top header">
-        <div class="row mobile-header">
+<body>
+    <header class="container header">
+        <div class="row">
             <div class="col-10 col-md-12 text-center">
                 <h1>
                     <a href="{% url 'home' %}" class="nav-link logo-font my-2">Full Service Minis</a>
                 </h1>
             </div>
-            <div class="col-2 d-md-none d-flex align-items-center"><i class="fas fa-bars"></i></div>
+            <div class="col-2 d-md-none d-flex align-items-center"><a class="text-black" data-bs-toggle="collapse"
+                    href="#mobileNavCollapse" role="button" aria-expanded="false" aria-controls="mobileNavCollapse"><i
+                        class="fas fa-bars fa-2x"></i></a>
+            </div>
+            {% include 'includes/mobile-nav.html' %}
         </div>
         <div class="row d-none d-md-block">
             <div class="col-12">
@@ -108,22 +112,6 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <!-- The following script was inspired by: https://stackoverflow.com/questions/10458465/how-to-set-height-of-element-to-match-height-of-another-element.
-    It sets the height of .header container to the height of the header, pushing the page content to below the header. I have customised it to work with my mobile layout-->
-    <script>
-        function headerHeight(){
-            let screenWidth = screen.width;
-            if (screenWidth > 576) {
-                $(".header-container").css("height", $(".header").height());
-            }
-            else {
-                $(".header-container").css("height", $(".mobile-header").height());
-            }
-        }
-        $(document).ready(function() {
-            headerHeight()
-        });
-    </script>
     {% endblock %}
 </body>
 
