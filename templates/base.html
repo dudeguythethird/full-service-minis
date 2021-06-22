@@ -46,56 +46,58 @@
 </head>
 
 <body>
-    <header class="container header">
-        <div class="row">
-            <div class="col-10 col-md-12 text-center">
-                <h1>
-                    <a href="{% url 'home' %}" class="nav-link logo-font my-2">Full Service Minis</a>
-                </h1>
+    <header class="container-fluid header">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 col-md-12 text-center">
+                    <h1>
+                        <a href="{% url 'home' %}" class="nav-link logo-font my-2">Full Service Minis</a>
+                    </h1>
+                </div>
+                <div class="col-2 d-md-none d-flex align-items-center"><a class="text-black" data-bs-toggle="collapse"
+                        href="#mobileNavCollapse" role="button" aria-expanded="false" aria-controls="mobileNavCollapse"><i
+                            class="fas fa-bars fa-2x"></i></a>
+                </div>
+                {% include 'includes/mobile-nav.html' %}
             </div>
-            <div class="col-2 d-md-none d-flex align-items-center"><a class="text-black" data-bs-toggle="collapse"
-                    href="#mobileNavCollapse" role="button" aria-expanded="false" aria-controls="mobileNavCollapse"><i
-                        class="fas fa-bars fa-2x"></i></a>
-            </div>
-            {% include 'includes/mobile-nav.html' %}
-        </div>
-        <div class="row d-none d-md-block">
-            <div class="col-12">
-                <ul class="nav nav-pills nav-fill">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
+            <div class="row d-none d-md-block">
+                <div class="col-12">
+                    <ul class="nav nav-pills nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Service Management</a>
+                                </li>
+                            {% endif %}
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Service Management</a>
+                                <a class="nav-link" href="#">My Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'account_signup' %}">Sign-up</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                             </li>
                         {% endif %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">My Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                        </li>
-                    {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_signup' %}">Sign-up</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                        </li>
-                    {% endif %}
-                    <!-- So far, I have not included a shopping bag link. My original plan was not to use a shopping bag but I think I may have to reconsider. When that happens, the code should go here.-->
-                </ul>
+                        <!-- So far, I have not included a shopping bag link. My original plan was not to use a shopping bag but I think I may have to reconsider. When that happens, the code should go here.-->
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
