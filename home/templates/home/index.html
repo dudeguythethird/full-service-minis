@@ -11,29 +11,89 @@
 
 {% block content %}
 <!-- Check if the container class ends up actually doing anything at end of project.-->
-    <div class="container">
-        <div class="row my-4">
-            <div class="col-lg-4 col-sm-12 col-md-6 my-auto img-container"><img src="media/space-wolf-hero.jpg"
-                    class="contained_img rounded" alt="Image of space wolf hero mid battle"></div>
-            <div class="col-lg-4 col-md-6 d-none d-md-block my-auto img-container"><img src="media/chaos-hero.jpg"
-                    class="contained_img rounded d-none d-md-block" alt="Image of space wolf hero mid battle"></div>
-            <div class="col-lg-4 d-lg-block d-none my-auto img-container"><img src="media/wolf-hero.jpg"
-                    class="contained_img rounded d-lg-block d-none" alt="Image of space wolf hero mid battle"></div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <h4 class="my-2">
-                    <a href="" class="btn btn-lg btn-danger rounded-4">Buy Painted Miniatures Now</a>
-                </h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-2 col-md-1 d-none d-md-block"></div>
-            <div class="col-12 col-md-10 col-lg-8">
-                <p class="my-2 p-3 rounded disclaimer">(Please note: this website is for a fictional miniature painting company. The website is only meant to be a demonstration of a full stack Django app. If you are looking for professional, fully painted miniatures, please check out <a href="https://ravensnestpainting.com/" target="_blank">Ravens Nest Painting</a>, who have kindly let me use their images for this student project.)</p>
-                <p class="my-4">Welcome to Full Service Minis! We offer fully painted Warhammer for your gaming needs. We stock a selection of <a href="#">popular kits</a> that you can get painted to a variety of quality grades. We also offer <a href="#">custom paint jobs</a>. These can be for any miniatures you desire and can also be as detailed as you see fit!</p>
-            </div>
-            <div class="col-lg-2 col-md-1 d-none d-md-block"></div>
+<div class="container">
+    <div class="row my-4">
+        <div class="col-lg-4 col-sm-12 col-sm-6 my-auto img-container"><img src="media/space-wolf-hero.jpg"
+                class="contained-img rounded" alt="Image of space wolf hero mid battle"></div>
+        <div class="col-lg-4 col-sm-6 d-none d-sm-block my-auto img-container"><img src="media/chaos-hero.jpg"
+                class="contained-img rounded d-none d-md-block" alt="Image of space wolf hero mid battle"></div>
+        <div class="col-lg-4 d-lg-block d-none my-auto img-container"><img src="media/wolf-hero.jpg"
+                class="contained-img rounded d-lg-block d-none" alt="Image of space wolf hero mid battle"></div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <h4 class="my-2">
+                <a href="" class="btn btn-lg btn-danger rounded">Buy Painted Miniatures Now</a>
+            </h4>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-1 d-none d-md-block"></div>
+        <div class="col-12 col-md-10">
+            <p class="my-2 p-3 rounded disclaimer">(Please note: this website is for a fictional miniature painting
+                company. The website is only meant to be a demonstration of a full stack Django app. If you are looking
+                for professional, fully painted miniatures, please check out <a href="https://ravensnestpainting.com/"
+                    target="_blank">Ravens Nest Painting</a>, who have kindly let me use their images for this student
+                project.)</p>
+
+            <p class="my-4">Welcome to Full Service Minis! We offer fully painted Warhammer for your gaming needs. We
+                stock a selection of <a href="#">popular kits</a> that you can get painted to a variety of quality
+                grades. We also offer <a href="#">custom paint jobs</a>. These can be for any miniatures you desire and
+                can also be as detailed as you see fit!</p>
+
+            <p class="my-4">Our fully painted miniatures come in three distinct tiers of paint work:</p>
+            <div class="row py-4">
+                <div class="col-5 col-md-4 img-container-ex"><img src="media/rat-example.jpg"
+                        alt="image of rat miniature, painted to a Game Ready standard"
+                        class="contained-img rounded-4 rounded"></div>
+                <div class="col-7 col-md-8">
+                    <h4>Game Ready</h4>
+                    <ul>
+                        <li>Our cheapest painting and construction tier. This is ideal if you want a nice looking set of
+                            miniatures without breaking the bank.</li>
+                        <li>A great option for those that just want to get their new minis on the tabletop.</li>
+                        <li>Includes basic texture work for your mini's bases, if applicable.</li>
+                        <li>Includes a base coat of up to 6 colours, recess shading and drybrushing.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row py-4">
+                <div class="col-7 col-md-8">
+                    <h4>Game Ready Enhanced</h4>
+                    <ul>
+                        <li>A step above Game Ready in both price and quality.</li>
+                        <li>This tier is designed for those that want painted miniatures for tabletop play, but want
+                            them to be a
+                            bit more striking than the norm.</li>
+                        <li>Includes texture work on your mini's bases, as well as battlefield debris, if applicable.
+                        </li>
+                        <li>Includes a base coat of up to 9 colours, recess shading, drybrushing, and brush highlighting
+                            for extra
+                            impact.</li>
+                    </ul>
+                </div>
+                <div class="col-5 col-md-4 img-container-ex">
+                    <img src="media/sword-marine-example.jpg" alt="Image of a space marine mini painted to game ready enhanced quality." class="contained-img rounded-4 rounded">
+                </div>
+                <div class="row py-4">
+                <div class="col-5 col-md-4 img-container-ex"><img src="media/troll-example.jpg"
+                        alt="image of troll miniature, painted to a Custom standard"
+                        class="contained-img rounded-4 rounded"></div>
+                <div class="col-7 col-md-8">
+                    <h4>Custom</h4>
+                    <ul>
+                        <li>This tier is only available through a <a href="#">unique order form</a>.</li>
+                        <li>This form can also be used to order kits we dont stock (painted to whatever grade you desire).</li>
+                        <li>The sky is the limit in terms of detail and non-standard features. Want dead ork on your marine's base? You need only ask.</li>
+                        <li>If wanted, we will use advance techniques, like wet blending, in custom paint jobs.</li>
+                        <li>The prices for these kinds of jobs can vary wildly, and will be decided in consultation between us and the client. When a price is reached, it can be payed <a href="#">here</a>.</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1 d-none d-md-block"></div>
+</div>
+</div>
 {% endblock %}

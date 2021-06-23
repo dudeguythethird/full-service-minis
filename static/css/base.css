@@ -41,6 +41,8 @@ header {
     border-color: darkred;
 }
 
+
+
 /*------------------------------------------------------Homepage*/
 
 /* Next two classes come from here (with some customisation) https://stackoverflow.com/questions/1891857/how-do-you-stretch-an-image-to-fill-a-div-while-keeping-the-images-aspect-rat */
@@ -50,10 +52,14 @@ header {
     width: 33.3333%;
 }
 
-.contained_img {
+.contained-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.img-container-ex {
+    height: auto;
 }
 
 .disclaimer {
@@ -67,16 +73,28 @@ header {
     .img-container {
         height: 400px;
         width: 100%;
-}}
+    }
+}
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     .img-container {
         height: 400px;
         width: 50%;
-}}
+    }
+    .rounded-4 {
+        border-radius: 10% !important;
+    }
+}
 
 @media (min-width: 992px) {
     .img-container {
         height: 400px;
         width: 33.33333%;
-}}
+    }
+    body {
+        font-size: larger;
+    }
+    .rounded-4 {
+        border-radius: 20% !important;
+    }
+}
