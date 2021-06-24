@@ -64,35 +64,35 @@
                 <div class="col-12">
                     <ul class="nav nav-pills nav-fill">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{% url 'home' %}">Home</a>
+                            <a class="nav-link" id="home" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'services' %}">Services</a>
+                            <a class="nav-link" id="services" href="{% url 'services' %}">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Gallery</a>
+                            <a class="nav-link" id="gallery" href="#">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
+                            <a class="nav-link" id="blog" href="#">Blog</a>
                         </li>
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Service Management</a>
+                                    <a class="nav-link" id="service-management" href="#">Service Management</a>
                                 </li>
                             {% endif %}
                             <li class="nav-item">
-                                <a class="nav-link" href="#">My Profile</a>
+                                <a class="nav-link" id="my-profile" href="#">My Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                                <a class="nav-link" id="logout" href="{% url 'account_logout' %}">Logout</a>
                             </li>
                         {% else %}
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_signup' %}">Sign-up</a>
+                                <a class="nav-link" id="signup" href="{% url 'account_signup' %}">Sign-up</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                                <a class="nav-link" id="login" href="{% url 'account_login' %}">Login</a>
                             </li>
                         {% endif %}
                         <!-- So far, I have not included a shopping bag link. My original plan was not to use a shopping bag but I think I may have to reconsider. When that happens, the code should go here.-->
@@ -147,6 +147,44 @@
         }
         $(document).ready(function() {
             headerHeight()
+        });
+        // This function applies the active class to nav links in the header, depending on the content of the URL.
+        function applyActive(){
+            let pathname = window.location.pathname;
+            let services = pathname.includes("services");
+            let gallery= pathname.includes("gallery");
+            let blog = pathname.includes("blog");
+            let serviceManagement = pathname.includes("service_management");
+            let signup = pathname.includes("signup");
+            let login = pathname.includes("login");
+            let myProfile = pathname.includes("my_profile");
+            if (pathname == "/"){
+                $("#home").addClass("active");
+            }
+            if (services) {
+                $("#services").addClass("active");
+            }
+            if (gallery) {
+                $("#gallery").addClass("active");
+            }
+            if (blog) {
+                $("#blog").addClass("active");
+            }
+            if (serviceManagement) {
+                $("#service-management").addClass("active");
+            }
+            if (signup) {
+                $("#signup").addClass("active");
+            }
+            if (login) {
+                $("#login").addClass("active");
+            }
+            if (myProfile) {
+                $("#my-profile").addClass("active");
+            }
+        }
+        $(document).ready(function() {
+            applyActive()
         });
     </script>
     {% endblock %}
