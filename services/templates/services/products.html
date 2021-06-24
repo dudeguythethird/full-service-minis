@@ -10,10 +10,17 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row my-4">
-            <div class="col">
-                {{ products }}
+    <div class="container-fluid">
+        <div class="row my-3">
+            <div class="col text-center border-bottom">
+                <h1 class="logo-font nav-link">Kits We Stock:</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-10 offset-1">
+                    {{ products }}
+                </div>
             </div>
         </div>
     </div>

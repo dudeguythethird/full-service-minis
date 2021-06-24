@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -27,8 +27,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-1 d-none d-md-block"></div>
-        <div class="col-12 col-md-10">
+        <div class="col-12 col-md-10 offset-md-1">
             <p class="my-2 p-3 rounded disclaimer">(Please note: this website is for a fictional miniature painting
                 company. The website is only meant to be a demonstration of a full stack Django app. If you are looking
                 for professional, fully painted miniatures, please check out <a href="https://ravensnestpainting.com/"
@@ -72,27 +71,31 @@
                     </ul>
                 </div>
                 <div class="col-5 col-md-4 img-container-ex">
-                    <img src="/media/sword-marine-example.jpg" alt="Image of a space marine mini painted to game ready enhanced quality." class="contained-img rounded-4 rounded">
+                    <img src="/media/sword-marine-example.jpg"
+                        alt="Image of a space marine mini painted to game ready enhanced quality."
+                        class="contained-img rounded-4 rounded">
                 </div>
                 <div class="row py-4">
-                <div class="col-5 col-md-4 img-container-ex"><img src="/media/troll-example.jpg"
-                        alt="image of troll miniature, painted to a Custom standard"
-                        class="contained-img rounded-4 rounded"></div>
-                <div class="col-7 col-md-8">
-                    <h4>Custom</h4>
-                    <ul>
-                        <li>This tier is only available through a <a href="#">unique order form</a>.</li>
-                        <li>This form can also be used to order kits we don't stock (painted to whatever grade you desire).</li>
-                        <li>The sky is the limit in terms of detail and non-standard features. Want dead ork on your marine's base? You need only ask.</li>
-                        <li>If wanted, we will use advance techniques, like wet blending, in custom paint jobs.</li>
-                        <li>The prices for these kinds of jobs can vary wildly, and will be decided in consultation between us and the client. When a price is reached, it can be payed <a href="#">here</a>.</li>
-                    </ul>
+                    <div class="col-5 col-md-4 img-container-ex"><img src="/media/troll-example.jpg"
+                            alt="image of troll miniature, painted to a Custom standard"
+                            class="contained-img rounded-4 rounded"></div>
+                    <div class="col-7 col-md-8">
+                        <h4>Custom</h4>
+                        <ul>
+                            <li>This tier is only available through a <a href="#">unique order form</a>.</li>
+                            <li>This form can also be used to order kits we don't stock (painted to whatever grade you
+                                desire).</li>
+                            <li>The sky is the limit in terms of detail and non-standard features. Want dead ork on your
+                                marine's base? You need only ask.</li>
+                            <li>If wanted, we will use advance techniques, like wet blending, in custom paint jobs.</li>
+                            <li>The prices for these kinds of jobs can vary wildly, and will be decided in consultation
+                                between us and the client. When a price is reached, it can be payed <a
+                                    href="#">here</a>.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
     </div>
-    <div class="col-md-1 d-none d-md-block"></div>
-</div>
 </div>
 {% endblock %}
