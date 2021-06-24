@@ -19,7 +19,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-10 offset-1">
-                    {{ products }}
+                    <div class="row">
+                        {% for product in products %}
+                            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                <div class="card my-2">
+                                    {% if product.image %}
+                                        <a href="#">
+                                            <img src="{{ product.image.url }}" class="card-img-top rounded" alt="image of warhammer kit">
+                                        </a>
+                                    {% else %}
+                                        <a href="#">
+                                            <img src="/media/no-image.jpg" class="card-img-top" alt="image not available">
+                                        </a>
+                                    {% endif %}
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ product.name }}</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">Base price: £{{ product.base_price }}</h6>
+                                        <a href="#" class="card-link">Customise</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
