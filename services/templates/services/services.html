@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row my-3">
+        <div class="col text-center border-bottom">
+            <h1 class="logo-font nav-link">Our Services</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 d-none d-md-block"></div>
+            <div class="col-12 col-md-10">
+                <p class="my-4">Here at Full Service Minis we offer a variety of services, from painting you up a highly
+                    detailed display piece, to fully assembling and painting an entire 2000 point Warhammer 40k army.
+                    Below is a link to our standard jobs page, where you can select from a variety of popular Warhammer
+                    kits, that we can buy, build and paint for you. This is a great option for customers looking to get
+                    a specific kit made and painted to a high standard. It also offers a high level of customisation.
+                </p>
+            </div>
+            <div class="col-md-1 d-none d-md-block"></div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h4 class="my-2">
+                    <a href="{% url 'products' %}" class="btn btn-lg btn-danger rounded">Standard Jobs</a>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 d-none d-md-block"></div>
+            <div class="col-12 col-md-10">
+                <p class="my-4">We also offer custom jobs. For these, the price can vary greatly. This page also
+                    contains information on what you can expect to pay for these kinds of jobs. See below...</p>
+            </div>
+            <div class="col-md-1 d-none d-md-block"></div>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col text-center border-bottom border-top">
+            <h1 class="logo-font nav-link mt-2">Painting Tier Pricing Guide</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 d-none d-md-block"></div>
+            <div class="col-12 col-md-10">
+                <p class="my-4">In all kinds of job, custom and standard, the price of the job is determined by the
+                    price of the kit that is being worked on. On top of this, there are charges for assembly, painting,
+                    and any custom features you want to add. Standard assembly charges are a flat +50% on top of the
+                    cost of the kit/s that you want made. Painting, on the other hand, comes in a variety of quality
+                    bands, detailed below:</p>
+            </div>
+            <div class="col-md-1 d-none d-md-block"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 d-none d-md-block"></div>
+            <div class="col-12 col-md-10">
+                <div class="row py-4">
+                    <div class="col-5 col-md-4 img-container-ex"><img src="media/rat-example.jpg"
+                            alt="image of rat miniature, painted to a Game Ready standard"
+                            class="contained-img rounded-4 rounded">
+                    </div>
+                    <div class="col-7 col-md-8">
+                        <h4>Game Ready (+50% to base price)</h4>
+                        <p>This tier consists of a zenithal base coat, up to 6 colours on the miniature, recess shading, and basic highlights achieved with dry brushing. At this tier, bases will be coated with one of a few, simple, natural terrain types.  </p>
+                    </div>
+                </div>
+                <div class="row py-4">
+                    <div class="col-7 col-md-8">
+                        <h4>Game Ready Enhanced (+100% to base price)</h4>
+                        <p>This tier consists of a zenithal base coat, up to 9 colours on the miniature, recess shading,  basic highlights achieved with dry brushing, and complex highlighting applied with careful thought. At this tier, bases will be coated with one of a few simple, natural terrain types, along with your choice of battlefield debris, strewn haphazardly. You can also choose a rolled pattern. </p>
+                    </div>
+                    <div class="col-5 col-md-4 img-container-ex">
+                        <img src="media/sword-marine-example.jpg"
+                            alt="Image of a space marine mini painted to game ready enhanced quality."
+                            class="contained-img rounded-4 rounded">
+                    </div>
+                    <div class="row py-4">
+                        <div class="col-5 col-md-4 img-container-ex"><img src="media/troll-example.jpg"
+                                alt="image of troll miniature, painted to a Custom standard"
+                                class="contained-img rounded-4 rounded"></div>
+                        <div class="col-7 col-md-8">
+                            <h4>Custom (Costs vary)</h4>
+                            <p>This is a painting tier that is only available in custom jobs. The sky is limit in terms of quality, you can expect all of the above and more. The price for this tier is deliberately left unspecified, as the difficulty of these jobs can vary wildly. If you are interested in this tier, please fill out this contact form:</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h4 class="my-2">
+                                <a href="#" class="btn btn-lg btn-danger rounded">Custom Jobs</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 d-none d-md-block"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

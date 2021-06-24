@@ -1,8 +1,8 @@
 <div class="collapse" id="mobileNavCollapse">
     <div class="card card-body">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item text-center"><a class="nav-link text-black" href="#">Home</a></li>
-            <li class="list-group-item text-center"><a class="nav-link text-black" href="#">Services</a></li>
+            <li class="list-group-item text-center"><a class="nav-link text-black" href="{% url 'home' %}">Home</a></li>
+            <li class="list-group-item text-center"><a class="nav-link text-black" href="{% url 'services' %}">Services</a></li>
             <li class="list-group-item text-center"><a class="nav-link text-black" href="#">Gallery</a></li>
             <li class="list-group-item text-center"><a class="nav-link text-black" href="#">Blog</a></li>
             {% if request.user.is_authenticated %}

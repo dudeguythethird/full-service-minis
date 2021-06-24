@@ -10,7 +10,6 @@
 {% endblock %}
 
 {% block content %}
-<!-- Check if the container class ends up actually doing anything at end of project.-->
 <div class="container">
     <div class="row my-4">
         <div class="col-lg-4 col-sm-12 col-sm-6 my-auto img-container"><img src="media/space-wolf-hero.jpg"
@@ -23,7 +22,7 @@
     <div class="row">
         <div class="col-12 text-center">
             <h4 class="my-2">
-                <a href="" class="btn btn-lg btn-danger rounded">Buy Painted Miniatures Now</a>
+                <a href="{% url 'products' %}" class="btn btn-lg btn-danger rounded">Buy Painted Miniatures Now</a>
             </h4>
         </div>
     </div>
