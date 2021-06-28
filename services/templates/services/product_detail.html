@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid border-bottom">
+        <div class="row my-3">
+            <div class="col text-center border-bottom">
+                <h4 class="my-3">
+                    <a href="{% url 'products' %}" class="btn btn-lg btn-danger rounded"><i
+                            class="fas fa-backspace"></i> Select a different kit</a>
+                </h4>
+                <h1 class="logo-font nav-link">{{ product.name }} Customisation</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                    <div class="my-2">
+                        {% if product.image %}
+                            <a href="{{ product.image.url }}" target="_blank">
+                                <img src="{{ product.image.url }}" class="card-img-top rounded" alt="image of warhammer kit">
+                            </a>
+                        {% else %}
+                            <a href="#">
+                                <img src="/media/no-image.jpg" class="card-img-top" alt="image not available">
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h5 class="card-title">Product: {{ product.name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Base price: £{{ product.base_price }}</h6>
+                    <p class="my-2">
+                        {{ product.description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center my-3 border-bottom">
+                <h2 class="card-title logo-font">Customisation:</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-10 offset-md-1">
+                <div class="col text-center my-3">
+                    <h4 class="card-title">Construction: Base price + 50%</h4>
+                </div>
+                    <form action="POST">
+                        <div class="mb-3">
+                            <label for="paintTier" class="form-label">Paint Tier</label>
+                            <select id="paintTier" class="form-select">
+                                <option>Game Ready +50%</option>
+                                <option>Game Ready Enhanced +100%</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
