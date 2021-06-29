@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product
+from .models import Product, Category
 
 
 def services(request):
@@ -12,12 +12,20 @@ def products(request):
     """A view to show all stocked products, as well as sorting them."""
 
     products = Product.objects.all()
+    categories = None
+
+    if request.GET:
+        if 'category' in request.GET:
+            category = request.GET['category'].split(',')
+            products = products.filter(category__name__in=category)
+            categories = Category.objects.filter(name__in=category)
 
     context = {
         'products': products,
+        'filter': categories,
     }
 
-    return render(request, 'services/products.html', context) 
+    return render(request, 'services/products.html', context)
 
 
 def product_details(request, product_id):

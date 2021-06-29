@@ -53,16 +53,23 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col col-md-10 offset-md-1">
+                <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                 <div class="col text-center my-3">
                     <h4 class="card-title">Construction: Base price + 50%</h4>
                 </div>
                     <form action="POST">
-                        <div class="mb-3">
+                        <div class="mb-3 text-center">
                             <label for="paintTier" class="form-label">Paint Tier</label>
                             <select id="paintTier" class="form-select">
                                 <option>Game Ready +50%</option>
                                 <option>Game Ready Enhanced +100%</option>
+                            </select>
+                            <label for="basingOptionsGR" class="form-label mt-4">Basing options</label>
+                            <select id="basingOptionsGR" class="form-select">
+                                <option>Desert</option>
+                                <option>Ash</option>
+                                <option>Grassland</option>
+                                <option>Snow</option>
                             </select>
                         </div>
                     </form>

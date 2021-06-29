@@ -11,9 +11,21 @@
 
 {% block content %}
     <div class="container-fluid">
-        <div class="row my-3">
-            <div class="col text-center border-bottom">
+        <div class="row my-3 border-bottom">
+            <div class="col-3"></div>
+            <div class="col-6 text-center ">
                 <h1 class="logo-font nav-link">Kits We Stock:</h1>
+            </div>
+            <div class="col-3">
+                <div class="dropdown">
+                    <button type="button" class="btn btn-danger dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Filter
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{% url 'products' %}?category=start_collecting">Start Collecting</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=combat_patrol">Combat Patrol</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">
